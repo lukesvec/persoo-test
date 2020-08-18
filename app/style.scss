@@ -1,0 +1,181 @@
+:root {
+    --bgGrey:       #e7e7e7;
+    --bgWhite:      #fff;
+    --brand:        #3cb8b6;
+    --brandDark:    #278a88;
+    --textGreen:    #009901;
+}
+
+body {
+    background-color: var(--bgGrey);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+html {
+    // better font rendering across platforms
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0, 0, 0, .01) 0 0 1px;
+}
+* {
+    box-sizing: border-box;
+}
+
+
+@mixin imageCover($type) {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: $type;
+}
+@mixin animate {
+    transition: all .2s linear;
+}
+
+
+.carouselContainer {
+    max-width: 1280px;
+    width: 100%;
+    margin: 4rem auto;
+    background-color: var(--bgWhite);
+    box-shadow: 0 0px 15px rgba(0,0,0,0.1);
+    position: relative;
+    padding: 25px 40px;
+}
+
+.glide__arrow {
+    appearance: none;
+    border: none;
+    background-color: transparent;
+    display: inline-flex;
+    position: absolute;
+    top: calc(50% - 12px);
+    left: -35px;
+    background-color: rgba(255,255,255,0.5);
+    svg {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+    svg polyline {
+        stroke: var(--brand);
+    }
+    &--right {
+        left: auto;
+        right: -35px;
+    }
+}
+
+.glide__slide {
+    border: 2px solid var(--bgGrey);
+    @include animate;
+    &:hover {
+        border: 2px solid var(--brand); 
+        @include animate;
+    }
+}
+
+.text--green {
+    color: var(--textGreen);
+}
+.product-card {
+    position: relative;
+    padding: 15px;
+    > a {
+        color: inherit;
+        text-decoration: inherit;
+    }
+    &:hover {
+        .product-card__title--text {
+            color: var(--brand);
+            @include animate;
+        }
+    }
+    &__flag {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+    }
+    &__image {
+        height: 200px;
+        img {
+            @include imageCover(contain);
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        &--text {
+            font-weight: 400;
+            color: #4F4F4F;
+            font-size: 17px;
+            margin-bottom: 5px;
+            @include animate;
+        }
+        &--gift {
+            font-size: 0.75rem;
+            color: #999;
+        }
+    }
+
+    &__decs {
+        font-size: 14px;
+        height: 250px;
+        margin-top: 10px;
+        &-logo {
+            height: 28px;
+            margin-bottom: 10px;
+            img {
+                @include imageCover(contain);
+                width: auto;
+            }
+        }
+    }
+
+    &__price {
+        &-detail {
+            appearance: none;
+            border: none;
+        }
+    }
+}
+
+.flag {
+    font-size: 11px;
+    margin-bottom: 5px;
+    padding: 4px 5px;
+    &--action {
+        color: white;
+        background-color: red;
+    }
+    &--gift {
+        color: white;
+        background-color: orange;
+    }
+}
+
+.button--primary {
+    background-color: var(--brand);
+    color: var(--bgWhite);
+    padding: 8px 15px;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    @include animate;
+    &:hover, &:active, &:focus {
+        background-color: var(--brandDark);
+        border: none;
+        outline: none;
+        @include animate;
+    }
+}

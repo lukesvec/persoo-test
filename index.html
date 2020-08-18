@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Testovací uloha | PERSOO</title>
+        <meta name="description" content=">Testovací uloha | PERSOO">
+        <meta name="author" content="Lukas Svec, lukas@tommyart.cz">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="/app/glider.min.css">
+        <link rel="stylesheet" href="/app/style.min.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <section class="carouselContainer">
+            <div class="glide">
+                <div data-glide-el="track" class="glide__track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">
+                            <div class="product-card">
+                                <a href="#">
+                                <div class="product-card__flag">
+                                    <div class="flag flag--gift">Dárek zdarma</div>
+                                    <div class="flag flag--action">Akce</div>
+                                </div>
+                                <div class="product-card__image">
+                                    <img src="https://cdn.myshoptet.com/usr/www.pocitarna.cz/user/shop/detail_small/19302-4_iphone-7-jet-black-4.jpg?5c88be6f" alt="IphoneImage">
+                                </div>
+                                <div class="product-card__title">
+                                    <h2 class="product-card__title--text">APPLE IPHONE 7 128GB JET BLACK</h2>
+                                    <div class="product-card__title--gift">+ OCHRANNÉ TVRZENÉ SKLO ZDARMA </div>
+                                </div>
+                                <div class="product-card__stock text--green">Skladem > 5</div>
+                                <div class="product-card__warranty">1 rok</div>
+                                <div class="product-card__decs">
+                                    <div class="product-card__decs-logo">
+                                        <img src="https://cdn.myshoptet.com/usr/www.pocitarna.cz/user/documents/upload/Loga%20v%C3%BDrobc%C5%AF%20-%20Kr%C3%A1tk%C3%BD%20popisek/apple%20logo.jpg" alt="Apple">
+                                    </div>
+                                    Mobilní telefon - Apple iPhone 7 Black, Dotykový (3D Touch) 4,7" Retina IPS HD displej (1334x750px), Procesor A10 Fusion 64bit + M10, RAM 2GB, Paměť 128GB, WiFi, Bluetooth 4.2, Fotoaparát 7Mpx a 12Mpx, NFC, GPS, (4G) LTE, Čtečka otisků prstů, Podpora iOS 12, Příslušenství + Ochranné tvrzené sklo ZDARMA
+                                </div>
+                                <div class="product-card__price-old">
+                                    <div class="product-card__price-old-price">
+                                        <div>Původně: 12 570 Kč</div>
+                                        <div>Ušetříte: <strong>6 409 Kč (–49 %)</strong></div>
+                                    </div>
+                                    <div class="product-card__price-old-compare">
+                                        <i data-feather="book-open"></i>
+                                        <div class="product-card__price-old-compare-text">Porovnej</div>
+                                    </div>
+                                </div>
+                                <div class="product-card__price">
+                                    <div class="product-card__price-price">
+                                        <div class="product-card__price-price--noVat">5 446 Kč bez DPH</div>
+                                        <div class="product-card__price-price--withVat">6 590 Kč</div>
+                                    </div>
+                                    <button class="product-card__price-detail button--primary">Detail</button>
+                                </div>
+                            </a>
+                            </div>
+                        </li>
+                        <li class="glide__slide">23</li>
+                        <li class="glide__slide">34</li>
+                        <li class="glide__slide">34</li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <a class="glide__arrow glide__arrow--left" data-glide-dir="<"><i data-feather="chevron-left"></i></a>
+                    <a class="glide__arrow glide__arrow--right" data-glide-dir=">"><i data-feather="chevron-right"></i></a>
+                </div>
+            </div>
+        </section>
+          
+        <script src="/app/glider.min.js"></script>
+        <script src="https://unpkg.com/feather-icons"></script>
+        <script>
+            var glide = new Glide('.glide', {
+                type: 'carousel',
+                perView: 4,
+                perTouch: 4,
+                focusAt: 0,
+                startAt: 0,
+                gap: 15,
+                animationDuration: 150,
+                touchRatio: 1,
+                bound: true,
+                breakpoints: {
+                    800: { perView: 2 },
+                    480: { perView: 1 }
+                },
+                peek: {
+                    before: 0,
+                    after: 0
+                }
+                });
+           glide.mount();
+           feather.replace();
+        </script>
+    </body>
+</html>
