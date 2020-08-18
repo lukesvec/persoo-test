@@ -74,7 +74,7 @@ html {
 }
 
 .glide__slide {
-    border: 2px solid var(--bgGrey);
+    border: 2px solid transparent;
     @include animate;
     &:hover {
         border: 2px solid var(--brand); 
@@ -247,4 +247,13 @@ html {
 }
 .py-xs {
     padding: 2px 0;
+}
+
+@media (max-width: 635px) {
+    .product-card__decs {
+        display: none;
+    }
+    .product-card__price-old {
+        margin-top: 10px;
+    }
 }
